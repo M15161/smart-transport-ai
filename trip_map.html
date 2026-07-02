@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ea26061c65368dba4dcabba1a8a5f19b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ea26061c65368dba4dcabba1a8a5f19b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ea26061c65368dba4dcabba1a8a5f19b = L.map(
+                "map_ea26061c65368dba4dcabba1a8a5f19b",
+                {
+                    center: [31.0409, 31.3785],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+
+            
+
+        
+    
+            var tile_layer_daefe05e1ee9fb53066861fb75f7cb3f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_daefe05e1ee9fb53066861fb75f7cb3f.addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            var marker_334e7e2c2716114ddddb750854e27c9d = L.marker(
+                [31.042, 31.3795],
+                {
+}
+            ).addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            var icon_e7cd3b322ecc51983c40fee7e865f4e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f7ad510c4c9eee2cf6b076d0ae08646 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4e8fcb22dac5e963fbde212ba3d38db8 = $(`<div id="html_4e8fcb22dac5e963fbde212ba3d38db8" style="width: 100.0%; height: 100.0%;">                 <div style='font-family: Arial, sans-serif; width: 180px; direction: ltr;'>                     <h4 style='margin:0 0 5px 0; color:#2c3e50;'>#1 ممشى توريل</h4>                     <b style='color:#f39c12;'>⭐ 4.8</b> (None reviews)<br>                     <b>💰 Cost:</b> 2 EGP<br>                     <b>⏰ Arrival:</b> 10:00<br>                     <span style='font-size:11px; color:#7f8c8d;'>Type: tourism</span>                 </div>                 </div>`)[0];
+                popup_8f7ad510c4c9eee2cf6b076d0ae08646.setContent(html_4e8fcb22dac5e963fbde212ba3d38db8);
+            
+        
+
+        marker_334e7e2c2716114ddddb750854e27c9d.bindPopup(popup_8f7ad510c4c9eee2cf6b076d0ae08646)
+        ;
+
+        
+    
+    
+            marker_334e7e2c2716114ddddb750854e27c9d.bindTooltip(
+                `<div>
+                     Stop 1: ممشى توريل
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_334e7e2c2716114ddddb750854e27c9d.setIcon(icon_e7cd3b322ecc51983c40fee7e865f4e6);
+            
+    
+            var marker_4bc9e8cc937af7cb2031e0951820fbfe = L.marker(
+                [31.041, 31.378],
+                {
+}
+            ).addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            var icon_826d68bdec33f29ff803e1903f384d73 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60da88a74f83de4bbcc75621fe6a4559 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_05ca488eff22665846fea575f49f5b9e = $(`<div id="html_05ca488eff22665846fea575f49f5b9e" style="width: 100.0%; height: 100.0%;">                 <div style='font-family: Arial, sans-serif; width: 180px; direction: ltr;'>                     <h4 style='margin:0 0 5px 0; color:#2c3e50;'>#2 كافيه اندريا المنصورة</h4>                     <b style='color:#f39c12;'>⭐ 4.6</b> (None reviews)<br>                     <b>💰 Cost:</b> 66 EGP<br>                     <b>⏰ Arrival:</b> 12:02<br>                     <span style='font-size:11px; color:#7f8c8d;'>Type: cafe</span>                 </div>                 </div>`)[0];
+                popup_60da88a74f83de4bbcc75621fe6a4559.setContent(html_05ca488eff22665846fea575f49f5b9e);
+            
+        
+
+        marker_4bc9e8cc937af7cb2031e0951820fbfe.bindPopup(popup_60da88a74f83de4bbcc75621fe6a4559)
+        ;
+
+        
+    
+    
+            marker_4bc9e8cc937af7cb2031e0951820fbfe.bindTooltip(
+                `<div>
+                     Stop 2: كافيه اندريا المنصورة
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4bc9e8cc937af7cb2031e0951820fbfe.setIcon(icon_826d68bdec33f29ff803e1903f384d73);
+            
+    
+            var marker_f5c07347f559f10800548df4ea63c760 = L.marker(
+                [31.0395, 31.38],
+                {
+}
+            ).addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            var icon_523d016d9953391203ff0b2a9d295c12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_668620bac342a502cd1e13222b2c2f9e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4b1c453b9d9d777bd9fa7a9ee58e0696 = $(`<div id="html_4b1c453b9d9d777bd9fa7a9ee58e0696" style="width: 100.0%; height: 100.0%;">                 <div style='font-family: Arial, sans-serif; width: 180px; direction: ltr;'>                     <h4 style='margin:0 0 5px 0; color:#2c3e50;'>#3 مطعم كشري زيزو</h4>                     <b style='color:#f39c12;'>⭐ 4.6</b> (None reviews)<br>                     <b>💰 Cost:</b> 72 EGP<br>                     <b>⏰ Arrival:</b> 12:50<br>                     <span style='font-size:11px; color:#7f8c8d;'>Type: restaurant</span>                 </div>                 </div>`)[0];
+                popup_668620bac342a502cd1e13222b2c2f9e.setContent(html_4b1c453b9d9d777bd9fa7a9ee58e0696);
+            
+        
+
+        marker_f5c07347f559f10800548df4ea63c760.bindPopup(popup_668620bac342a502cd1e13222b2c2f9e)
+        ;
+
+        
+    
+    
+            marker_f5c07347f559f10800548df4ea63c760.bindTooltip(
+                `<div>
+                     Stop 3: مطعم كشري زيزو
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f5c07347f559f10800548df4ea63c760.setIcon(icon_523d016d9953391203ff0b2a9d295c12);
+            
+    
+            var marker_8705ea8d7c49333560c63efaffba3452 = L.marker(
+                [31.035, 31.381],
+                {
+}
+            ).addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            var icon_f1b24c0a370d27cbbcb5228352393dfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61ed080f08a3b9e04affc7de1538fe06 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_feeb9a0533b7dd735d890c3ff6570c99 = $(`<div id="html_feeb9a0533b7dd735d890c3ff6570c99" style="width: 100.0%; height: 100.0%;">                 <div style='font-family: Arial, sans-serif; width: 180px; direction: ltr;'>                     <h4 style='margin:0 0 5px 0; color:#2c3e50;'>#4 نادي الجزيرة</h4>                     <b style='color:#f39c12;'>⭐ 4.6</b> (None reviews)<br>                     <b>💰 Cost:</b> 3 EGP<br>                     <b>⏰ Arrival:</b> 13:56<br>                     <span style='font-size:11px; color:#7f8c8d;'>Type: tourism</span>                 </div>                 </div>`)[0];
+                popup_61ed080f08a3b9e04affc7de1538fe06.setContent(html_feeb9a0533b7dd735d890c3ff6570c99);
+            
+        
+
+        marker_8705ea8d7c49333560c63efaffba3452.bindPopup(popup_61ed080f08a3b9e04affc7de1538fe06)
+        ;
+
+        
+    
+    
+            marker_8705ea8d7c49333560c63efaffba3452.bindTooltip(
+                `<div>
+                     Stop 4: نادي الجزيرة
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8705ea8d7c49333560c63efaffba3452.setIcon(icon_f1b24c0a370d27cbbcb5228352393dfa);
+            
+    
+            var marker_1d8bc8435888c5f3dee291fe6a11c41b = L.marker(
+                [31.04, 31.379],
+                {
+}
+            ).addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            var icon_1e0f0ef0325dddfd9a3e965f755bc5ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8563384146e36efbecaadd808dcfa85c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ec576c1a00e1ed07ec562f4f0322c88d = $(`<div id="html_ec576c1a00e1ed07ec562f4f0322c88d" style="width: 100.0%; height: 100.0%;">                 <div style='font-family: Arial, sans-serif; width: 180px; direction: ltr;'>                     <h4 style='margin:0 0 5px 0; color:#2c3e50;'>#5 Starbucks المنصورة</h4>                     <b style='color:#f39c12;'>⭐ 4.5</b> (None reviews)<br>                     <b>💰 Cost:</b> 73 EGP<br>                     <b>⏰ Arrival:</b> 16:03<br>                     <span style='font-size:11px; color:#7f8c8d;'>Type: cafe</span>                 </div>                 </div>`)[0];
+                popup_8563384146e36efbecaadd808dcfa85c.setContent(html_ec576c1a00e1ed07ec562f4f0322c88d);
+            
+        
+
+        marker_1d8bc8435888c5f3dee291fe6a11c41b.bindPopup(popup_8563384146e36efbecaadd808dcfa85c)
+        ;
+
+        
+    
+    
+            marker_1d8bc8435888c5f3dee291fe6a11c41b.bindTooltip(
+                `<div>
+                     Stop 5: Starbucks المنصورة
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d8bc8435888c5f3dee291fe6a11c41b.setIcon(icon_1e0f0ef0325dddfd9a3e965f755bc5ff);
+            
+    
+            var marker_1fb6ec8db111a2439fd6349529d55702 = L.marker(
+                [31.0415, 31.377],
+                {
+}
+            ).addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            var icon_df976d0bc709d82d7807020f753879ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f365096a3927beaa8418f06021858d41 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7812809a7f9b7238f524b70ac3c83193 = $(`<div id="html_7812809a7f9b7238f524b70ac3c83193" style="width: 100.0%; height: 100.0%;">                 <div style='font-family: Arial, sans-serif; width: 180px; direction: ltr;'>                     <h4 style='margin:0 0 5px 0; color:#2c3e50;'>#6 كافيه كوستا المنصورة</h4>                     <b style='color:#f39c12;'>⭐ 4.4</b> (None reviews)<br>                     <b>💰 Cost:</b> 46 EGP<br>                     <b>⏰ Arrival:</b> 16:51<br>                     <span style='font-size:11px; color:#7f8c8d;'>Type: cafe</span>                 </div>                 </div>`)[0];
+                popup_f365096a3927beaa8418f06021858d41.setContent(html_7812809a7f9b7238f524b70ac3c83193);
+            
+        
+
+        marker_1fb6ec8db111a2439fd6349529d55702.bindPopup(popup_f365096a3927beaa8418f06021858d41)
+        ;
+
+        
+    
+    
+            marker_1fb6ec8db111a2439fd6349529d55702.bindTooltip(
+                `<div>
+                     Stop 6: كافيه كوستا المنصورة
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1fb6ec8db111a2439fd6349529d55702.setIcon(icon_df976d0bc709d82d7807020f753879ea);
+            
+    
+            var poly_line_9e16a9f5d6fd62ad985642bac35bc5ec = L.polyline(
+                [[31.042, 31.3795], [31.041, 31.378], [31.0395, 31.38], [31.035, 31.381], [31.04, 31.379], [31.0415, 31.377]],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_ea26061c65368dba4dcabba1a8a5f19b);
+        
+    
+            poly_line_9e16a9f5d6fd62ad985642bac35bc5ec.bindTooltip(
+                `<div>
+                     Optimized AI Route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

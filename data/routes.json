@@ -1,0 +1,37 @@
+{
+  "المنصورة_القاهرة": {
+    "cheapest": {
+      "cost": 70,
+      "duration": 150,
+      "transport": "Train"
+    },
+    "fastest": {
+      "cost": 100,
+      "duration": 120,
+      "transport": "Microbus"
+    },
+    "comfortable": {
+      "cost": 600,
+      "duration": 100,
+      "transport": "Uber"
+    }
+  },
+
+  "القاهرة_الإسكندرية": {
+    "cheapest": {
+      "cost": 90,
+      "duration": 180,
+      "transport": "Train"
+    },
+    "fastest": {
+      "cost": 150,
+      "duration": 150,
+      "transport": "Bus"
+    },
+    "comfortable": {
+      "cost": 900,
+      "duration": 140,
+      "transport": "Uber"
+    }
+  }
+}

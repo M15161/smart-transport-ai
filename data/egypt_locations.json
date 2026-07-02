@@ -1,0 +1,22 @@
+{
+  "Cairo": ["القاهرة", "القاهره", "cairo", "cairoo"],
+  "Giza": ["الجيزة", "الجيزه", "giza"],
+  "Alexandria": ["الإسكندرية", "الاسكندرية", "اسكندرية", "alexandria", "alex"],
+  "Mansoura": ["المنصورة", "المنصوره", "mansoura", "mansora"],
+  "Tanta": ["طنطا", "tanta"],
+  "Zagazig": ["الزقازيق", "zagazig"],
+  "Aswan": ["أسوان", "اسوان", "aswan"],
+  "Luxor": ["الأقصر", "الاقصر", "luxor"],
+  "Ismailia": ["الإسماعيلية", "الاسماعيلية", "ismailia"],
+  "Port Said": ["بورسعيد", "port said"],
+  "Suez": ["السويس", "suez"],
+  "Damietta": ["دمياط", "damietta"],
+  "Fayoum": ["الفيوم", "fayoum"],
+  "Minya": ["المنيا", "minya"],
+  "Sohag": ["سوهاج", "sohag"],
+  "Qena": ["قنا", "qena"],
+  "Hurghada": ["الغردقة", "hurghada"],
+  "Sharm El Sheikh": ["شرم الشيخ", "sharm", "sharm el sheikh"],
+  "Beni Suef": ["بني سويف", "beni suef"],
+  "Kafr El Sheikh": ["كفر الشيخ", "kafr el sheikh"]
+}

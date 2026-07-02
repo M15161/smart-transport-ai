@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-dotenv
+pandas
+numpy
+osmnx
+geopandas
+shapely
+networkx
+google-generativeai
+pydantic
+requests
+html2image
+folium
