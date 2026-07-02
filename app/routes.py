@@ -91,3 +91,15 @@ def generate_trip(request: TripRequest):
         lat=None,
         lon=None
     )
+@router.get("/poster/image")
+def get_poster_image():
+    file_path = "trip_poster.png"
+
+    if not os.path.exists(file_path):
+        return {"error": "poster not found"}
+
+    return FileResponse(
+        path=file_path,
+        media_type="image/png",
+        filename="trip_poster.png"
+    )
