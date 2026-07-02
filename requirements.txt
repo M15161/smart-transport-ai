@@ -7,7 +7,7 @@ osmnx
 geopandas
 shapely
 networkx
-google-genai
+google-generativeai
 pydantic
 requests
 html2image
