@@ -21,7 +21,59 @@ try:
 except ImportError:
     REAL_PLACES_DB = {}
 
+from typing import Optional
 
+def generate_trip_itinerary(city: str, mood: str) -> dict:
+    """
+    تقوم بتوليد برنامج سياحي متكامل ومخطط لرحلة داخل مدينة مصرية بناءً على تفضيلات المستخدم (الموود).
+
+    Args:
+        city: اسم المدينة باللغة العربية (مثل: القاهرة، المنصورة، الإسكندرية، الجيزة، الأقصر، أسوان، دهب، شرم الشيخ، الغردقة، طنطا).
+        mood: نوع الرحلة أو الأجواء المطلوبة. يجب أن تكون واحدة من القيم التالية فقط:
+              ('youth' للشبابية، 'family' للعائلية، 'romantic' للرومانسية، 'adventure' للمغامرة، 'tourism' للسياحية التاريخية، 'luxury' للراقية).
+    
+    Returns:
+        dict: يحتوي على قائمة بالأماكن المرتبة والمفلترة وجدول الرحلة المنظم.
+    """
+    # هنا نقوم باستدعاء الكلاس الخاص بك الذي قمت ببنائه
+    # تفترض الدالة أنك قمت بتجهيز دالة رئيسية داخل الكلاس تقوم بالفلترة والترتيب (مثل التوزيع على الساعات)
+    planner = TripPlanner()
+    
+    # تحويل اسم المدينة لو كان إنجليزي إلى عربي ليتوافق مع الـ Registry عندك
+    city_clean = planner.CITY_TRANSLATIONS.get(city.lower(), city)
+    
+    # 1. جلب الأماكن الخاصة بالمدينة من الـ DB المتاحة عندك
+    places = planner.PRIORITY_LANDMARKS_DB.get(city_clean, [])
+    
+    if not places:
+        return {"status": "error", "message": f"عذراً، مدينة {city} غير مدعومة حالياً في قاعدة بياناتنا."}
+    
+    # 2. الحصول على إحداثيات المدينة للفلترة والترتيب
+    center_lat, center_lon = planner.CITY_COORDINATES_REGISTRY.get(city_clean, (30.0444, 31.2357))
+    
+    # 3. فلترة الأماكن بناءً على الجودة (بدون اشتراط عدد مراجعات تعجيزي للداتا الثابتة)
+    filtered_places = planner._filter_places_quality(places, center_lat, center_lon, require_reviews=False)
+    
+    # 4. ترتيب الأماكن بناءً على السكور والموود باستخدام الدالة التي أكملناها سوياً
+    ranked_places = planner._rank_places(filtered_places, center_lat, center_lon, mood_lower=mood)
+    
+    # (ملاحظة: يمكنك هنا إضافة دالة توزيع الساعات Slot Allocation لاحقاً)
+    # سنعيد هنا الأماكن المرتبة كأقوى ترشيحات للموود الحالي
+    top_suggestions = [
+        {
+            "الاسم": p["name"],
+            "النوع": planner.ARABIC_TYPE_LABELS.get(p["type"], p["type"]),
+            "الفئة السعرية": p.get("price_tier", "غير محدد")
+        }
+        for p in ranked_places[:4] # نأخذ أعلى 4 أماكن متوافقة تماماً
+    ]
+    
+    return {
+        "status": "success",
+        "city": city_clean,
+        "mood": planner.MOOD_TRANSLATIONS.get(mood, mood),
+        "suggestions": top_suggestions
+    }
 class TripPlanner:
     CITY_TRANSLATIONS = {
         "cairo": "القاهرة", "القاهرة": "القاهرة",
