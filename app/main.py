@@ -26,6 +26,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from app.routes import router
+from app.chat_routes import router as chat_router
 
 app = FastAPI(
     title="Smart Transport AI",
@@ -53,4 +54,10 @@ app.include_router(
     router,
     prefix="/ai",
     tags=["AI"]
+)
+
+app.include_router(
+    chat_router,
+    prefix="/ai",
+    tags=["ChatBot"]
 )
