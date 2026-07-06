@@ -1,0 +1,89 @@
+{
+  "القاهرة": {
+    "family": [
+      {
+        "name": "حديقة الأزهر",
+        "type": "park",
+        "cost": 50
+      },
+      {
+        "name": "ممشى أهل مصر",
+        "type": "walk",
+        "cost": 0
+      }
+    ],
+
+    "youth": [
+      {
+        "name": "كايرو فستيفال",
+        "type": "shopping",
+        "cost": 200
+      },
+      {
+        "name": "مول مصر",
+        "type": "shopping",
+        "cost": 150
+      }
+    ],
+
+    "quiet": [
+      {
+        "name": "مكتبة القاهرة الكبرى",
+        "type": "culture",
+        "cost": 20
+      }
+    ]
+  },
+
+  "الإسكندرية": {
+    "family": [
+      {
+        "name": "حدائق المنتزه",
+        "type": "park",
+        "cost": 40
+      }
+    ],
+
+    "youth": [
+      {
+        "name": "كورنيش الإسكندرية",
+        "type": "walk",
+        "cost": 0
+      }
+    ],
+
+    "quiet": [
+      {
+        "name": "مكتبة الإسكندرية",
+        "type": "culture",
+        "cost": 70
+      }
+    ]
+  },
+
+  "المنصورة": {
+    "family": [
+      {
+        "name": "جزيرة الورد",
+        "type": "park",
+        "cost": 20
+      }
+    ],
+
+    "youth": [
+      {
+        "name": "توريل",
+        "type": "walk",
+        "cost": 0
+      }
+    ],
+
+    "quiet": [
+      {
+        "name": "مكتبة مصر العامة",
+        "type": "culture",
+        "cost": 10
+      }
+    ]
+  }
+}
